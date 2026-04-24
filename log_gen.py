@@ -36,7 +36,7 @@ def generate_logs():
     # 텍스트 형태로 파일 기록(한줄에 로그 1개씩) -> f-string 사용해서 구성
     # 파일명 ./sensor_logs/sensor_text.log
     text =f"[{data["timestamp"]}]  ID={data['sensor_id']} | TEMP={data['temperature']} | HUM={data['humidity']} |  STAT={data['status']}"
-    with open(f"{log_dir}/sensor_test.log", "+a" , encoding= 'utf-8') as f:  # 계속해서 추가해야되니까 append
+    with open(f"{log_dir}/sensor_text.log", "+a" , encoding= 'utf-8') as f:  # 계속해서 추가해야되니까 append
         f.write(json.dumps(text)+"\n")
     print(f"로그발생 {data['timestamp']}")
 

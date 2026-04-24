@@ -22,7 +22,7 @@ services:
     networks:
       - kafka-net
 
-  # 2. Fluent Bit
+  # 2. Fluent Bit -> C
   fluent-bit:
     image: fluent/fluent-bit:latest
     container_name: fluent-bit
@@ -34,7 +34,7 @@ services:
     networks:
       - kafka-net
 
-  # 3. Logstash
+  # 3. Logstash -> Java
   logstash:
     image: docker.elastic.co/logstash/logstash:8.12.0
     container_name: logstash
@@ -44,6 +44,23 @@ services:
       LS_JAVA_OPTS: "-Xms512m -Xmx512m"
     depends_on:
       - kafka
+    networks:
+      - kafka-net
+
+  # 4. Kafka UI (모니터링, 관리)
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8081:8080"
+    depends_on:
+      - kafka
+      #- kafka-connect
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local-cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      #KAFKA_CLUSTERS_0_KAFKACONNECT_0_NAME: first-connect
+      #KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: http://kafka-connect:8083
     networks:
       - kafka-net
 

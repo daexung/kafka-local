@@ -118,3 +118,12 @@ docker compose restart
 '''
 - 지원 플러그인
     - 1000여개 <-> 100여개
+
+
+        docker exec -it kafka-local bash
+
+    # json 관련 토픽 커슈머
+    ./opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic factory-json-topic --from-beginning
+
+    # text 관련 토픽 커슈머
+    ./opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic factory-text-topic --from-beginning
