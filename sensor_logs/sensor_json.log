@@ -1,0 +1,8 @@
+{"timestamp": "2026-04-24-10:32:34", "sensor_id": "AI-FACTORY-001", "temperature": 97.62, "humidity": 16.92, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:36", "sensor_id": "AI-FACTORY-001", "temperature": 57.72, "humidity": 24.7, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:38", "sensor_id": "AI-FACTORY-001", "temperature": 75.6, "humidity": 3.66, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:40", "sensor_id": "AI-FACTORY-001", "temperature": 75.91, "humidity": 19.7, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:42", "sensor_id": "AI-FACTORY-001", "temperature": 99.64, "humidity": 1.95, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:44", "sensor_id": "AI-FACTORY-001", "temperature": 52.47, "humidity": 6.49, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:46", "sensor_id": "AI-FACTORY-001", "temperature": 76.29, "humidity": 19.41, "status": "RUNNING"}
+{"timestamp": "2026-04-24-10:32:48", "sensor_id": "AI-FACTORY-001", "temperature": 94.87, "humidity": 19.6, "status": "RUNNING"}
